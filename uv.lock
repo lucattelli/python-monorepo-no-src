@@ -28,3 +28,13 @@ source = { editable = "packages/ai-pipeline" }
 name = "python-monorepo-no-src"
 version = "0.1.0"
 source = { editable = "." }
+dependencies = [
+    { name = "ai-executor" },
+    { name = "ai-pipeline" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "ai-executor", editable = "packages/ai-executor" },
+    { name = "ai-pipeline", editable = "packages/ai-pipeline" },
+]
