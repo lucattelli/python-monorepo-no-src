@@ -1,0 +1,30 @@
+version = 1
+requires-python = ">=3.11"
+
+[manifest]
+members = [
+    "ai-executor",
+    "ai-pipeline",
+    "python-monorepo-no-src",
+]
+
+[[package]]
+name = "ai-executor"
+version = "0.1.0"
+source = { editable = "packages/ai-executor" }
+dependencies = [
+    { name = "ai-pipeline" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "ai-pipeline", editable = "packages/ai-pipeline" }]
+
+[[package]]
+name = "ai-pipeline"
+version = "0.1.0"
+source = { editable = "packages/ai-pipeline" }
+
+[[package]]
+name = "python-monorepo-no-src"
+version = "0.1.0"
+source = { editable = "." }

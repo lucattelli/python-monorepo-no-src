@@ -1,0 +1,14 @@
+[project]
+name = "ai-executor"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ['ai-pipeline']
+
+[tool.uv.sources]
+ai-pipeline = { workspace = true }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
